@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://127.0.0.1:5500/Final/hungman/hungman.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+   
+    
+   
+    
+  <link href="./Hangman.image_files/css2" rel="stylesheet"><link rel="stylesheet" href="./Hangman.image_files/hungman.css"></head>
+  <body>
+    <div class="container">
+      <div id="options-container"><h3>Please Select An Option</h3><div><button class="options" onclick="generateWord(&#39;cars&#39;)">cars</button><button class="options" onclick="generateWord(&#39;animals&#39;)">animals</button><button class="options" onclick="generateWord(&#39;countries&#39;)">countries</button></div></div>
+      <div id="letter-container" class="letter-container hide"><button class="letters">A</button><button class="letters">B</button><button class="letters">C</button><button class="letters">D</button><button class="letters">E</button><button class="letters">F</button><button class="letters">G</button><button class="letters">H</button><button class="letters">I</button><button class="letters">J</button><button class="letters">K</button><button class="letters">L</button><button class="letters">M</button><button class="letters">N</button><button class="letters">O</button><button class="letters">P</button><button class="letters">Q</button><button class="letters">R</button><button class="letters">S</button><button class="letters">T</button><button class="letters">U</button><button class="letters">V</button><button class="letters">W</button><button class="letters">X</button><button class="letters">Y</button><button class="letters">Z</button><button class="letters">[</button></div>
+      <div id="user-input-section"></div>
+      <canvas id="canvas"></canvas>
+      <div id="new-game-container" class="new-game-popup hide">
+        <div id="result-text"><h2 class="win-msg">Congratulation, You win!'</h2><p>The word was <span>KIA</span></p></div>
+        <button id="new-game-button">New Game</button>
+      </div>
+    </div>
+    
+    <script src="./Hangman.image_files/hungman.js"></script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
